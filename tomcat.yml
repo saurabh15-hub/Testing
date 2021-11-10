@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: copy the index.html to tomcat server
+    copy:
+      src: /etc/ansible/index.html
+      dest: /opt/tomcat9/webapps/ROOT/index.jsp
